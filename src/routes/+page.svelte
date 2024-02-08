@@ -1,5 +1,4 @@
 <script context="module">
-	// Define options for the API request
 	const options = {
 		method: 'GET',
 		headers: {
@@ -30,6 +29,7 @@
 	});
 
 	import PopularMovies from '../components/PopularMovies.svelte';
+	import global from '../global.css';
 </script>
 
 {#if popular.length > 0}
