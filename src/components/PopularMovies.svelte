@@ -1,4 +1,5 @@
 <script>
+	console.log('Popular movies: ');
 	export let popular;
 	console.log(popular[0]);
 </script>
