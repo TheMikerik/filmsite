@@ -12,6 +12,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import MovieCard from '../../../components/MovieCard.svelte';
+	import { fly } from 'svelte/transition';
 
 	let movieDetails = [];
 
@@ -35,7 +36,11 @@
 	});
 </script>
 
-<div class="movie-details">
+<div
+	class="movie-details"
+	in:fly={{ y: 50, duration: 700, delay: 500 }}
+	out:fly={{ duration: 500 }}
+>
 	<div class="img-container">
 		<img
 			src={'https://image.tmdb.org/t/p/original/' + movieDetails.backdrop_path}

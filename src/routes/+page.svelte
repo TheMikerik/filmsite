@@ -29,11 +29,14 @@
 	});
 
 	import PopularMovies from '../components/PopularMovies.svelte';
+	import SearchMovies from '../components/searchMovies.svelte';
 	import global from '../global.css';
+	import { fly } from 'svelte/transition';
 </script>
 
 {#if popular.length > 0}
-	<section>
+	<section in:fly={{ y: 50, duration: 500, delay: 500 }} out:fly={{ duration: 500 }}>
+		<SearchMovies />
 		<PopularMovies {popular} />
 	</section>
 {/if}
