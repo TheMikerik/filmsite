@@ -3,8 +3,7 @@
 		method: 'GET',
 		headers: {
 			accept: 'application/json',
-			Authorization:
-				'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTA1MDk0ZGRjZDA1ODA2MzVkNmM1YjQ2NDZjODEwMCIsInN1YiI6IjY1YzRiY2JjZmQ2ZmExMDE4Nzc5NjMzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qNpoqAl_bfIGisVodZLJDK_P7_NbB5et_ApnaylGz3I'
+			Authorization: import.meta.env.VITE_API
 		}
 	};
 </script>
@@ -13,6 +12,7 @@
 	import { onMount } from 'svelte';
 	import MovieCard from '../../../components/MovieCard.svelte';
 	import { fly } from 'svelte/transition';
+	import.meta.env.VITE_API;
 
 	let movieDetails = [];
 
